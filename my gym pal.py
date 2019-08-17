@@ -1,10 +1,6 @@
 from tkinter import *
 from tkinter import messagebox as msg
 
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from matplotlib.figure import Figure
-import matplotlib.pyplot as plt
-
 import os 
 import csv
 import datetime
@@ -82,6 +78,7 @@ class MyGymPal():
                 
         
         msg.showinfo("Your exersice","Name of the exercise:"+str(self.textname.get(1.0,END))+"Reps:"+str(self.varnumreps.get())+"\n"+"Sets:"+str(self.varnumset.get())+"\n"+"Kg:"+str(self.kgslider.get()))
+        
 def main():
     root=Tk()
     mgp = MyGymPal(root)
