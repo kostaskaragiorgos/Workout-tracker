@@ -122,7 +122,8 @@ class MyGymPal():
             self.master.destroy()
     
     def helpmenu(self):
-        pass
+        msg.showinfo("Help","Enter the name of the exercise, the number of sets,reps and the kg amount and press the submit button to save the data ")
+        
     
     def aboutmenu(self):
         msg.showinfo("About", "My Gym Pal\nVersion 1.0")
