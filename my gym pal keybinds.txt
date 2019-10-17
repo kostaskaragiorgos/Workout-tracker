@@ -1,0 +1,18 @@
+File menu
+=======================
+Submit Exercise Alt + O
+Exit Alt + F4
+=======================
+Show menu
+=================================
+Today's Workout Alt + W
+Total workouts this month Alt + T
+=================================
+About menu
+==============
+About Ctrl + I
+==============
+Help menu 
+==============
+Help Ctrl + F1
+==============
