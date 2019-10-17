@@ -41,7 +41,7 @@ class MyGymPal():
         
         self.show_menu = Menu(self.menu,tearoff = 0)
         self.show_menu.add_command(label = "Today's Workout",command = self.towork)
-        self.show_menu.add_command(label = "Total workouts per month",accelerator = 'Alt+T',command =self.totwork)
+        self.show_menu.add_command(label = "Total workouts this month",accelerator = 'Alt+T',command =self.totwork)
         self.menu.add_cascade(label = "Show",menu = self.show_menu)
         
         self.about_menu = Menu(self.menu,tearoff = 0)
