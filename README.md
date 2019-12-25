@@ -2,6 +2,13 @@
 
 <p> You can track you workout </p>
 
+## FILES 
+<ul>
+  <li> gym pal update.png (version image) </li>
+  <li> my gym pal keybinds.txt( keybinds file) </li>
+  <li> my gym pal.py(the python file ) </li>
+</ul>
+
 ## Dependencies
 
  <ul>
