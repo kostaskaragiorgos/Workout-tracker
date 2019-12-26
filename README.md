@@ -18,6 +18,17 @@
   <li> second way to install pandas ( pip install pandas) </li>
 </ul>
 
+## HOW TO USE
+
+<ul>
+  <li> Enter the name of the exersice </li>
+  <li> Set the number of sets </li>
+  <li> Set the number of reps </li>
+  <li> Set the number of kgs </li>
+  <li> Press submit </li>
+ </ul>
+  
+
 **Current Version**
 
 <p><img src ="gympal update.png" title = "Gym Pal Version"/> </p>
