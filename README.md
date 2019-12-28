@@ -31,7 +31,7 @@
 
 **Current Version**
 
-<p><img src ="gympal update.png" title = "Gym Pal Version"/> </p>
+<p><img src ="my gym pal.png" title = "Gym Pal Version"/> </p>
 
 ## Keybinds
 
