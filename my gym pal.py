@@ -95,13 +95,10 @@ class MyGymPal():
         self.subb = Button(self.master,text = "Submit",command = self.submitb)
         self.subb.pack()
         
-        self.resetb = Button(self.master,text = "Reset")
-        self.resetb.pack()
-    
-    def reset(self):
-        pass
-    
-    
+        #self.resetb = Button(self.master,text = "Reset")
+        #self.resetb.pack() TODO
+
+
     
     def towork(self):
         if os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv') == False:
@@ -127,7 +124,7 @@ class MyGymPal():
                     thewriter.writerow([str(self.textname.get(1.0,END)),str(self.varnumset.get()),str(self.varnumreps.get()),str(self.kgslider.get())])
                     f.close()
             
-            msg.showinfo("Your exersice","Name of the exercise:"+str(self.textname.get(1.0,END))+"Reps:"+str(self.varnumreps.get())+"\n"+"Sets:"+str(self.varnumset.get())+"\n"+"Kg:"+str(self.kgslider.get()))
+            msg.showinfo("Your exersice","Name of the exercise:"+str(self.textname.get(1.0,END))+"Reps:"+str(self.varnumreps.get())+"Sets:"+str(self.varnumset.get())+"Kg:"+str(self.kgslider.get()))
     
     def exitmenu(self):
         if msg.askokcancel("Quit?", "Really quit?"):
