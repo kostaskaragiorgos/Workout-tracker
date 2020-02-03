@@ -31,7 +31,9 @@ class MyGymPal():
             os.chdir(str(nowmonth))
             
         self.nowday = datetime.date.today().day
-                
+
+        #menu
+            
         self.menu = Menu(self.master)
         
         self.file_menu = Menu(self.menu,tearoff = 0)
