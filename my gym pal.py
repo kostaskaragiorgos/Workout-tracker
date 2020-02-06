@@ -127,7 +127,8 @@ class MyGymPal():
                     f.close()
             
             msg.showinfo("Your exersice","Name of the exercise:"+str(self.textname.get(1.0,END))+"Reps:"+str(self.varnumreps.get())+"Sets:"+str(self.varnumset.get())+"Kg:"+str(self.kgslider.get()))
-    
+            self.textname.delete(1.0,END)
+            
     def exitmenu(self):
         if msg.askokcancel("Quit?", "Really quit?"):
             self.master.destroy()
