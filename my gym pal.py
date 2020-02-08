@@ -42,7 +42,7 @@ class MyGymPal():
         self.menu.add_cascade(label = "File",menu=self.file_menu)
 
         self.edit_menu = Menu(self.menu,tearoff = 0 )
-        self.edit_menu.add_command(label = "Clear Name",command = self.clearname)
+        self.edit_menu.add_command(label = "Clear Name",accelerator = 'Ctrl + S',command = self.clearname)
         self.menu.add_cascade(label = "Edit",menu = self.edit_menu)
         
         self.show_menu = Menu(self.menu,tearoff = 0)
@@ -66,6 +66,7 @@ class MyGymPal():
         self.master.bind('<Alt-o>',lambda event:self.submitb())
         self.master.bind('<Alt-t>',lambda event:self.totwork())
         self.master.bind('<Alt-w>',lambda event:self.towork())
+        self.master.bind('<Control-s>',lambda event: self.clearname())
         
         self.exname = Label(self.master,
                                text = "Enter the name of the exercise")
