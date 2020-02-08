@@ -40,6 +40,10 @@ class MyGymPal():
         self.file_menu.add_command(label = "Submit Exercise", accelerator = 'Alt+O',command = self.submitb)
         self.file_menu.add_command(label="Exit",accelerator= 'Alt+F4',command = self.exitmenu)
         self.menu.add_cascade(label = "File",menu=self.file_menu)
+
+        self.edit_menu = Menu(self.menu,tearoff = 0 )
+        self.edit_menu.add_command(label = "Clear Name",command = self.clearname)
+        self.menu.add_cascade(label = "Edit",menu = self.edit_menu)
         
         self.show_menu = Menu(self.menu,tearoff = 0)
         self.show_menu.add_command(label = "Today's Workout",accelerator = 'Alt+W',command = self.towork)
@@ -99,7 +103,9 @@ class MyGymPal():
         
         #self.resetb = Button(self.master,text = "Reset")
         #self.resetb.pack() TODO
-
+    
+    def clearname(self):
+        self.textname.delete(1.0,END)
 
     
     def towork(self):
