@@ -11,7 +11,7 @@ class MyGymPal():
     def __init__(self,master):
         self.master = master
         self.master.title("My Gym Pal")
-        self.master.geometry("270x270")
+        self.master.geometry("270x290")
         self.master.resizable(False,False)
         
         nowyear = datetime.date.today().year
@@ -102,8 +102,15 @@ class MyGymPal():
         self.subb = Button(self.master,text = "Submit",command = self.submitb)
         self.subb.pack()
         
-        #self.resetb = Button(self.master,text = "Reset")
-        #self.resetb.pack() TODO
+        self.resetb = Button(self.master,text = "Reset",command  = self.reset)
+        self.resetb.pack()
+
+    
+    def reset(self):
+        self.varnumreps.set(self.repslist[0])
+        self.varnumset.set(self.setslist[0])
+        self.kgslider.set(0)
+        self.textname.delete(1.0,END)
     
     def clearname(self):
         self.textname.delete(1.0,END)
