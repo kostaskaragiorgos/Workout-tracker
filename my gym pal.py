@@ -78,10 +78,10 @@ class MyGymPal():
         self.setsleb = Label(self.master,text="Sets")
         self.setsleb.pack()
         
-        setslist = list(range(1,21))
+        self.setslist = list(range(1,21))
         self.varnumset = StringVar(master)
-        self.varnumset.set(setslist[0])
-        self.popupsetmenu = OptionMenu(self.master,self.varnumset,*setslist)
+        self.varnumset.set(self.setslist[0])
+        self.popupsetmenu = OptionMenu(self.master,self.varnumset,*self.setslist)
         self.popupsetmenu.pack()
         
         self.reps = Label(self.master,text="Reps")
@@ -134,6 +134,9 @@ class MyGymPal():
                     f.close()
             
             msg.showinfo("Your exersice","Name of the exercise:"+str(self.textname.get(1.0,END))+"Reps:"+str(self.varnumreps.get())+"Sets:"+str(self.varnumset.get())+"Kg:"+str(self.kgslider.get()))
+            self.varnumreps.set(self.repslist[0])
+            self.varnumset.set(self.setslist[0])
+            self.kgslider.set(0)
             self.textname.delete(1.0,END)
             
     def exitmenu(self):
