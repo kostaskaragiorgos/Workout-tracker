@@ -37,7 +37,9 @@
 
  <ul>
   <li> Submit Exercise(Alt+O) </li>
+  <li> Reset(Alt+R) </li>
   <li> Exit(Alt+F4) </li>
+  <li> Clear Name(Ctrl + S) </li>
   <li> Today's Workout(Alt+W) </li>
   <li> Total workouts this month(Alt+T) </li>
   <li> About(Ctrl+I) </li>
