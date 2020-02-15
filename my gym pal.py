@@ -38,6 +38,7 @@ class MyGymPal():
         
         self.file_menu = Menu(self.menu,tearoff = 0)
         self.file_menu.add_command(label = "Submit Exercise", accelerator = 'Alt+O',command = self.submitb)
+        self.file_menu.add_command(label =  "Reset",accelerator = 'Alt+R',command = self.reset)
         self.file_menu.add_command(label="Exit",accelerator= 'Alt+F4',command = self.exitmenu)
         self.menu.add_cascade(label = "File",menu=self.file_menu)
 
@@ -66,6 +67,7 @@ class MyGymPal():
         self.master.bind('<Alt-o>',lambda event:self.submitb())
         self.master.bind('<Alt-t>',lambda event:self.totwork())
         self.master.bind('<Alt-w>',lambda event:self.towork())
+        self.master.bind('<Alt-r>',lambda event: self.reset())
         self.master.bind('<Control-s>',lambda event: self.clearname())
         
         self.exname = Label(self.master,
