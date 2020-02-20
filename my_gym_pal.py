@@ -1,12 +1,9 @@
-from tkinter import *
+from tkinter import Tk, Menu, Label, Text, Scale, Button, StringVar, OptionMenu,HORIZONTAL,END
 from tkinter import messagebox as msg
-
 import os 
 import csv
 import datetime
 import pandas as pd
-
-
 class MyGymPal():
     def __init__(self,master):
         self.master = master
