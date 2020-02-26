@@ -13,13 +13,13 @@ class MyGymPal():
         self.master.resizable(False, False)
         nowyear = datetime.date.today().year
         nowmonth = datetime.date.today().month
-        if os.path.exists(str(nowyear)) == False:
+        if not os.path.exists(str(nowyear)):
             os.mkdir(str(nowyear))
             os.chdir(str(nowyear))
         else:
             os.chdir(str(nowyear))
         
-        if os.path.exists(str(nowmonth)) == False:
+        if not os.path.exists(str(nowmonth)):
             os.mkdir(str(nowmonth))
             os.chdir(str(nowmonth))
         else:
@@ -86,6 +86,7 @@ class MyGymPal():
         self.resetb = Button(self.master, text="Reset", command=self.reset)
         self.resetb.pack() 
     def reset(self):
+        """ reset button function """
         self.varnumreps.set(self.repslist[0])
         self.varnumset.set(self.setslist[0])
         self.kgslider.set(0)
@@ -93,16 +94,17 @@ class MyGymPal():
     def clearname(self):
         self.textname.delete(1.0, END)
     def towork(self):
-        if os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv') == False:
+        if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
             msg.showerror("No Exercises", "No exercises saved")
         else:
             df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
             msg.showinfo("Today's Workout", str(df))
     def submitb(self):
+        """ submit button function """
         if self.textname.count(1.0, END) == (1, ):
             msg.showerror("Name Error", "Enter the name of the  exercise")
         else:
-            if os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv') == False:
+            if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
                 with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
                     thewriter = csv.writer(f)
                     thewriter.writerow(['Name of the exercise', 'No of sets', 'No of reps', 'Kg'])
