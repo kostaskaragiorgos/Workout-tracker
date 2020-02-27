@@ -16,6 +16,8 @@
   <li> second way to install csv( pip install python-csv) </li>
   <li> pandas (conda install -c anaconda pandas) </li>
   <li> second way to install pandas ( pip install pandas) </li>
+  <li> radon (conda install -c conda-forge radon) </li>
+  <li> second way to install radon (pip install radon) </li>
 </ul>
 
 ## HOW TO USE
@@ -32,6 +34,10 @@
 **Current Version**
 
 <p><img src ="my gym pal.png" title = "Gym Pal Version"/> </p>
+
+**Radon**
+
+<p><img src = "my_gym_pal radon cc.png" title = "Gym Pal Radon CC">
 
 ## Keybinds
 
