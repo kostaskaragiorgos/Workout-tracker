@@ -1,9 +1,22 @@
+"""
+helps you tack your workouts
+"""
 from tkinter import Tk, Menu, Label, Text, Scale, Button, StringVar, OptionMenu
 from tkinter import HORIZONTAL, END, messagebox as msg
 import os
 import csv
 import datetime
 import pandas as pd
+def totwork():
+    """ days of workout this month"""
+    listoffiles = os.listdir()
+    msg.showinfo("Montly Workout", "Day(s) of workout: "+str(len(listoffiles)))  
+def helpmenu():
+    """ help menu function """
+    msg.showinfo("Help", "Enter the name of the exercise, the number of sets,reps and the kg amount and press the submit button to save the data ")
+def aboutmenu():
+    """ about menu function """
+    msg.showinfo("About", "My Gym Pal\nVersion 1.0")
 class MyGymPal():
     """ My gym pal class """
     def __init__(self, master):
@@ -41,20 +54,20 @@ class MyGymPal():
         self.menu.add_cascade(label="Edit", menu=self.edit_menu)
         self.show_menu = Menu(self.menu, tearoff=0)
         self.show_menu.add_command(label="Today's Workout", accelerator='Alt+W', command=self.towork)
-        self.show_menu.add_command(label="Total workouts this month", accelerator='Alt+T', command=self.totwork)
+        self.show_menu.add_command(label="Total workouts this month", accelerator='Alt+T', command=totwork)
         self.menu.add_cascade(label="Show", menu=self.show_menu)
         self.about_menu = Menu(self.menu, tearoff=0)
-        self.about_menu.add_command(label="About", accelerator='Ctrl+I', command=self.aboutmenu)
+        self.about_menu.add_command(label="About", accelerator='Ctrl+I', command=aboutmenu)
         self.menu.add_cascade(label="About", menu=self.about_menu)
         self.help_menu = Menu(self.menu, tearoff=0)
-        self.help_menu.add_command(label="Help", accelerator='Ctrl+F1', command=self.helpmenu)
+        self.help_menu.add_command(label="Help", accelerator='Ctrl+F1', command=helpmenu)
         self.menu.add_cascade(label="Help", menu=self.help_menu)
         self.master.config(menu=self.menu)
         self.master.bind('<Alt-F4>', lambda event: self.exitmenu())
-        self.master.bind('<Control-F1>', lambda event: self.helpmenu())
-        self.master.bind('<Control-i>', lambda event: self.aboutmenu())
+        self.master.bind('<Control-F1>', lambda event: helpmenu())
+        self.master.bind('<Control-i>', lambda event: aboutmenu())
         self.master.bind('<Alt-o>', lambda event: self.submitb())
-        self.master.bind('<Alt-t>', lambda event: self.totwork())
+        self.master.bind('<Alt-t>', lambda event: totwork())
         self.master.bind('<Alt-w>', lambda event: self.towork())
         self.master.bind('<Alt-r>', lambda event: self.reset())
         self.master.bind('<Control-s>', lambda event: self.clearname())
@@ -92,8 +105,10 @@ class MyGymPal():
         self.kgslider.set(0)
         self.textname.delete(1.0, END)
     def clearname(self):
+        """ clear name text field """
         self.textname.delete(1.0, END)
     def towork(self):
+        """ workout summary of the day """
         if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
             msg.showerror("No Exercises", "No exercises saved")
         else:
@@ -122,16 +137,7 @@ class MyGymPal():
     def exitmenu(self):
         """ exit menu function """
         if msg.askokcancel("Quit?", "Really quit?"):
-            self.master.destroy()
-    def helpmenu(self):
-        """ help menu function """
-        msg.showinfo("Help", "Enter the name of the exercise, the number of sets,reps and the kg amount and press the submit button to save the data ")
-    def aboutmenu(self):
-        """ about menu function """
-        msg.showinfo("About", "My Gym Pal\nVersion 1.0")
-    def totwork(self):
-        listoffiles = os.listdir()
-        msg.showinfo("Montly Workout", "Day(s) of workout: "+str(len(listoffiles)))        
+            self.master.destroy()      
 def main():
     """ main function"""
     root = Tk()
