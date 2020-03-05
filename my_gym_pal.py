@@ -31,13 +31,11 @@ class MyGymPal():
             os.chdir(str(nowyear))
         else:
             os.chdir(str(nowyear))
-        
         if not os.path.exists(str(nowmonth)):
             os.mkdir(str(nowmonth))
             os.chdir(str(nowmonth))
         else:
             os.chdir(str(nowmonth))
-            
         self.nowday = datetime.date.today().day
         #menu
         self.menu = Menu(self.master)
@@ -113,6 +111,7 @@ class MyGymPal():
             msg.showerror("No Exercises", "No exercises saved")
         else:
             df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
+            df = df.drop_duplicates(keep="first")
             msg.showinfo("Today's Workout", str(df))
     def submitb(self):
         """ submit button function """
