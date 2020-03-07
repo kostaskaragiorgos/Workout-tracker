@@ -122,12 +122,10 @@ class MyGymPal():
                 with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
                     thewriter = csv.writer(f)
                     thewriter.writerow(['Name of the exercise', 'No of sets', 'No of reps', 'Kg'])
-                    f.close() 
             else:
                 with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
                     thewriter = csv.writer(f)
                     thewriter.writerow([str(self.textname.get(1.0, END)), str(self.varnumset.get()), str(self.varnumreps.get()), str(self.kgslider.get())])
-                    f.close()
             msg.showinfo("Your exersice", "Name of the exercise:"+str(self.textname.get(1.0, END))+"Reps:"+str(self.varnumreps.get())+"Sets:"+str(self.varnumset.get())+"Kg:"+str(self.kgslider.get()))
             self.varnumreps.set(self.repslist[0])
             self.varnumset.set(self.setslist[0])
