@@ -1,10 +1,24 @@
 # Workout-tracker
 
+<p> You can track you workout </p>
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 
-<p> You can track you workout </p>
+# Table of contents
+
+<!--ts-->
+  *[Workout-tracker](#Workout-tracker)
+  *[Table of contents](#Table_of_contents)
+  *[Files](#FILES)
+  *[Dependencies](#Dependencies)
+  *[HOW TO USE](#HOW_TO_USE)
+  *[Current Version](#Current_Version)
+  *[Radon](#Radon)
+  *[Keybinds](#Keybinds)
+  *[License](#License)
+<!--te-->
+
 
 ## FILES 
 <ul>
@@ -35,11 +49,11 @@
  </ul>
   
 
-**Current Version**
+## Current Version
 
 <p><img src ="my gym pal.png" title = "Gym Pal Version"/> </p>
 
-**Radon**
+## Radon
 
 <p><img src = "my_gym_pal radon cc.png" title = "Gym Pal Radon CC"/></p>
 <p><img src = "my_gym_pal radon hal.png" title = "Gym Pal Radon hal"/></p>
