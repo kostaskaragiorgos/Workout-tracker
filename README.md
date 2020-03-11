@@ -8,15 +8,15 @@
 # Table of contents
 
 <!--ts-->
-  *[Workout-tracker](#Workout-tracker)
-  *[Table of contents](#Table_of_contents)
-  *[Files](#FILES)
-  *[Dependencies](#Dependencies)
-  *[HOW TO USE](#HOW_TO_USE)
-  *[Current Version](#Current_Version)
-  *[Radon](#Radon)
-  *[Keybinds](#Keybinds)
-  *[License](#License)
+  * [Workout-tracker](#Workout-tracker)
+  * [Table of contents](#Table_of_contents)
+  * [Files](#FILES)
+  * [Dependencies](#Dependencies)
+  * [HOW TO USE](#HOW_TO_USE)
+  * [Current Version](#Current_Version)
+  * [Radon](#Radon)
+  * [Keybinds](#Keybinds)
+  * [License](#License)
 <!--te-->
 
 
