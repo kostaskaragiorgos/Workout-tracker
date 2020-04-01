@@ -51,14 +51,14 @@
 
 ## Current Version
 
-<p><img src ="my gym pal.png" title = "Gym Pal Version"/> </p>
+<p><img src ="images/my gym pal.png" title = "Gym Pal Version"/> </p>
 
 ## Radon
 
-<p><img src = "my_gym_pal radon cc.png" title = "Gym Pal Radon CC"/></p>
-<p><img src = "my_gym_pal radon hal.png" title = "Gym Pal Radon hal"/></p>
-<p><img src = "my_gym_pal radon mi.png" title = "Gym Pal Radon mi"/> </p>
-<p><img src = "my_gym_pal radon raw.png" title = "Gym Pal Radon raw"/> </p>
+<p><img src = "images/my_gym_pal radon cc.png" title = "Gym Pal Radon CC"/></p>
+<p><img src = "images/my_gym_pal radon hal.png" title = "Gym Pal Radon hal"/></p>
+<p><img src = "images/my_gym_pal radon mi.png" title = "Gym Pal Radon mi"/> </p>
+<p><img src = "images/my_gym_pal radon raw.png" title = "Gym Pal Radon raw"/> </p>
 
 ## Keybinds
 
