@@ -112,6 +112,7 @@ class MyGymPal():
         else:
             df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
             df = df.drop_duplicates(keep="first")
+            df = df.replace(r'\r\n','',regex=True)
             msg.showinfo("Today's Workout", str(df))
     def submitb(self):
         """ submit button function """
