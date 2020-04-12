@@ -111,8 +111,8 @@ class MyGymPal():
             msg.showerror("No Exercises", "No exercises saved")
         else:
             df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
-            df = df.drop_duplicates(keep="first")
-            df = df.replace(r'\r\n','',regex=True)
+            df.drop_duplicates(keep="first",inplace=True)
+            df = df.replace(r'\r\n','',regex=True, inplace=True)
             msg.showinfo("Today's Workout", str(df))
     def submitb(self):
         """ submit button function """
