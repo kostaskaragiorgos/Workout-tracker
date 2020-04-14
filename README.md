@@ -10,9 +10,9 @@
 <!--ts-->
   * [Workout-tracker](#Workout-tracker)
   * [Table of contents](#Table_of_contents)
-  * [Files](#FILES)
+  * [Files/Folders](#Files/Folders)
   * [Dependencies](#Dependencies)
-  * [HOW TO USE](#HOW_TO_USE)
+  * [Documentation](#Documentation)
   * [Current Version](#Current_Version)
   * [Radon](#Radon)
   * [Keybinds](#Keybinds)
@@ -20,7 +20,7 @@
 <!--te-->
 
 
-## FILES 
+## Files/Folders
 <ul>
   <li> gym pal update.png (version image) </li>
   <li> my gym pal keybinds.txt( keybinds file) </li>
@@ -38,20 +38,13 @@
   <li> second way to install radon (pip install radon) </li>
 </ul>
 
-## HOW TO USE
-
-<ul>
-  <li> Enter the name of the exersice </li>
-  <li> Set the number of sets </li>
-  <li> Set the number of reps </li>
-  <li> Set the number of kgs </li>
-  <li> Press submit </li>
- </ul>
-  
-
 ## Current Version
 
 <p><img src ="images/my gym pal.png" title = "Gym Pal Version"/> </p>
+
+## Documentation
+
+All project documentation is located in the `./doc`  folder.
 
 ## Radon
 
