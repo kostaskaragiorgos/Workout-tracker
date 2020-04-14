@@ -42,11 +42,11 @@ class MyGymPal():
         self.file_menu = Menu(self.menu, tearoff=0)
         self.file_menu.add_command(label="Submit Exercise", accelerator='Alt+O',
                                    command=self.submitb)
-        self.file_menu.add_command(label="Reset", accelerator='Alt+R', command=self.reset)
         self.file_menu.add_command(label="Exit", accelerator='Alt+F4',
                                    command=self.exitmenu)
         self.menu.add_cascade(label="File", menu=self.file_menu)
         self.edit_menu = Menu(self.menu, tearoff=0)
+        self.edit_menu.add_command(label="Reset", accelerator='Alt+R', command=self.reset)
         self.edit_menu.add_command(label="Clear Name", accelerator='Ctrl + S',
                                    command=self.clearname)
         self.menu.add_cascade(label="Edit", menu=self.edit_menu)
