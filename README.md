@@ -22,7 +22,8 @@
 
 ## Files/Folders
 <ul>
-  <li> gym pal update.png (version image) </li>
+  <li> doc (documentation folder) </p>
+  <li> images (images folder) </p>
   <li> my gym pal keybinds.txt( keybinds file) </li>
   <li> my gym pal.py(the python file ) </li>
 </ul>
