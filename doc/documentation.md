@@ -20,13 +20,13 @@ You press ok to close the app or cancel if you don't want
 
 ## Reset
 
-You can reset name , sets reps and kg to initial state
+You can reset name , sets reps and kg to initial state Edit --> Reset or using Alt+R keybind
 
 <p><img src = "doc images/file/reset.png" title="reset"/> </p>
 
 ## Clear Name
 
-You can clear the name of the exercise text field using File --> Clear Name or using Ctrl+S keybind
+You can clear the name of the exercise text field using Edit --> Clear Name or using Ctrl+S keybind
 
 <p><img src = "doc images/file/clear name.png" title="clear name"/> </p>
 
@@ -34,4 +34,27 @@ You can clear the name of the exercise text field using File --> Clear Name or u
 
 ## Today's workout
 
+You can see today's workout using Show --> Today's workout or using Alt + W
+
+<p><img src = "doc images/show/today's workout.png" title="clear name"/> </p>
+
+if there are no exercises saved today an error message pops up
+
+<p><img src = "doc images/show/no exercises.png" title="no exercises"/> </p>
+
+else an informative window pops up
+
+
+<p><img src = "doc images/show/todays workout no error.png" title="today's workout"/> </p>
+
+
 ## Total workouts this month
+
+You can see the number of workouts this month using Show --> Total workouts this month or using Alt + T
+
+<p><img src = "doc images/show/total workouts.png" title="total workouts"/> </p>
+
+
+An informative message pops up
+
+<p><img src = "doc images/show/montly workout.png" title="total workouts"/> </p>
