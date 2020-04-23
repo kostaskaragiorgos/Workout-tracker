@@ -95,7 +95,7 @@ class MyGymPal():
         self.subb = Button(self.master, text="Submit", command=self.submitb)
         self.subb.pack()
         self.resetb = Button(self.master, text="Reset", command=self.reset)
-        self.resetb.pack() 
+        self.resetb.pack()
     def reset(self):
         """ reset button function """
         self.varnumreps.set(self.repslist[0])
