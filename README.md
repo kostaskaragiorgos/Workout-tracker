@@ -15,6 +15,10 @@
   * [Documentation](#Documentation)
   * [Current Version](#Current_Version)
   * [Radon](#Radon)
+    * [Radon cc](#Radon_cc)
+    * [Radon hal](#Radon_hal)
+    * [Radon mi](#Radon_mi)
+    * [Radon raw](#Radon_raw)
   * [Keybinds](#Keybinds)
   * [License](#License)
 <!--te-->
@@ -49,9 +53,20 @@ All project documentation is located in the `./doc`  folder.
 
 ## Radon
 
+### Radon_cc
+
 <p><img src = "images/my_gym_pal radon cc.png" title = "Gym Pal Radon CC"/></p>
+
+### Radon_hal
+
 <p><img src = "images/my_gym_pal radon hal.png" title = "Gym Pal Radon hal"/></p>
+
+### Radon_mi
+
 <p><img src = "images/my_gym_pal radon mi.png" title = "Gym Pal Radon mi"/> </p>
+
+### Radon_raw
+
 <p><img src = "images/my_gym_pal radon raw.png" title = "Gym Pal Radon raw"/> </p>
 
 ## Keybinds
