@@ -12,8 +12,8 @@
   * [Table of contents](#Table_of_contents)
   * [Files/Folders](#Files/Folders)
   * [Dependencies](#Dependencies)
-  * [Documentation](#Documentation)
   * [Current Version](#Current_Version)
+  * [Documentation](#Documentation)
   * [Radon](#Radon)
     * [Radon cc](#Radon_cc)
     * [Radon hal](#Radon_hal)
@@ -26,8 +26,8 @@
 
 ## Files/Folders
 <ul>
-  <li> doc (documentation folder) </p>
-  <li> images (images folder) </p>
+  <li> doc (documentation folder) </li>
+  <li> images (images folder) </li>
   <li> my gym pal keybinds.txt( keybinds file) </li>
   <li> my gym pal.py(the python file ) </li>
 </ul>
@@ -71,7 +71,7 @@ All project documentation is located in the `./doc`  folder.
 
 ## Keybinds
 
- <ul>
+<ul>
   <li> Submit Exercise(Alt+O) </li>
   <li> Exit(Alt+F4) </li>
   <li> Reset(Alt+R) </li>
