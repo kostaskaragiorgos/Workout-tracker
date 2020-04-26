@@ -2,7 +2,7 @@
 
 <p> You can track you workout </p>
 
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html) [![Coverage Status](https://coveralls.io/repos/github/kostaskaragiorgos/Workout-tracker/badge.svg?branch=master)](https://coveralls.io/github/kostaskaragiorgos/Workout-tracker?branch=master)
 
 
 # Table of contents
