@@ -47,7 +47,7 @@ class MyGymPal():
         self.menu.add_cascade(label="File", menu=self.file_menu)
         self.edit_menu = Menu(self.menu, tearoff=0)
         self.edit_menu.add_command(label="Reset", accelerator='Alt+R', command=self.reset)
-        self.edit_menu.add_command(label="Clear Name", accelerator='Ctrl + S',
+        self.edit_menu.add_command(label="Clear Name", accelerator='Ctrl+S',
                                    command=self.clearname)
         self.menu.add_cascade(label="Edit", menu=self.edit_menu)
         self.show_menu = Menu(self.menu, tearoff=0)
