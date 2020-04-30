@@ -9,8 +9,7 @@ import datetime
 import pandas as pd
 def totwork():
     """ days of workout this month"""
-    listoffiles = os.listdir()
-    msg.showinfo("Montly Workout", "Day(s) of workout: "+str(len(listoffiles)))  
+    msg.showinfo("Montly Workout", "Day(s) of workout: "+str(len(os.listdir())))  
 def helpmenu():
     """ help menu function """
     msg.showinfo("Help", "Enter the name of the exercise, the number of sets,reps and the kg amount and press the submit button to save the data ")
@@ -129,10 +128,7 @@ class MyGymPal():
                     thewriter = csv.writer(f)
                     thewriter.writerow([str(self.textname.get(1.0, END)), str(self.varnumset.get()), str(self.varnumreps.get()), str(self.kgslider.get())])
             msg.showinfo("Your exersice", "Name of the exercise:"+str(self.textname.get(1.0, END))+"Reps:"+str(self.varnumreps.get())+"Sets:"+str(self.varnumset.get())+"Kg:"+str(self.kgslider.get()))
-            self.varnumreps.set(self.repslist[0])
-            self.varnumset.set(self.setslist[0])
-            self.kgslider.set(0)
-            self.textname.delete(1.0, END)
+            self.reset()
     def exitmenu(self):
         """ exit menu function """
         if msg.askokcancel("Quit?", "Really quit?"):
