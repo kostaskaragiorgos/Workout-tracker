@@ -36,6 +36,11 @@ class MyGymPal():
         else:
             os.chdir(str(nowmonth))
         self.nowday = datetime.date.today().day
+        # file creation
+        if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
+            with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
+                thewriter = csv.writer(f)
+                thewriter.writerow(['Name of the exercise', 'No of sets', 'No of reps', 'Kg'])
         #menu
         self.menu = Menu(self.master)
         self.file_menu = Menu(self.menu, tearoff=0)
@@ -118,15 +123,9 @@ class MyGymPal():
         if self.textname.count(1.0, END) == (1, ):
             msg.showerror("Name Error", "Enter the name of the  exercise")
         else:
-            if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
-                with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
-                    thewriter = csv.writer(f)
-                    thewriter.writerow(['Name of the exercise', 'No of sets', 'No of reps', 'Kg'])
-                    thewriter.writerow([str(self.textname.get(1.0, END)), str(self.varnumset.get()), str(self.varnumreps.get()), str(self.kgslider.get())])
-            else:
-                with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
-                    thewriter = csv.writer(f)
-                    thewriter.writerow([str(self.textname.get(1.0, END)), str(self.varnumset.get()), str(self.varnumreps.get()), str(self.kgslider.get())])
+            with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
+                thewriter = csv.writer(f)
+                thewriter.writerow([str(self.textname.get(1.0, END)), str(self.varnumset.get()), str(self.varnumreps.get()), str(self.kgslider.get())])
             msg.showinfo("Your exersice", "Name of the exercise:"+str(self.textname.get(1.0, END))+"Reps:"+str(self.varnumreps.get())+"Sets:"+str(self.varnumset.get())+"Kg:"+str(self.kgslider.get()))
             self.reset()
     def exitmenu(self):
