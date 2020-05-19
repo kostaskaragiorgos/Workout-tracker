@@ -16,6 +16,12 @@ def helpmenu():
 def aboutmenu():
     """ about menu function """
     msg.showinfo("About", "My Gym Pal\nVersion 1.0")
+def checkfolder(folder):
+    if not os.path.exists(str(folder)):
+        os.mkdir(str(folder))
+        os.chdir(str(folder))
+    else:
+        os.chdir(str(folder))
 class MyGymPal():
     """ My gym pal class """
     def __init__(self, master):
@@ -25,16 +31,8 @@ class MyGymPal():
         self.master.resizable(False, False)
         nowyear = datetime.date.today().year
         nowmonth = datetime.date.today().month
-        if not os.path.exists(str(nowyear)):
-            os.mkdir(str(nowyear))
-            os.chdir(str(nowyear))
-        else:
-            os.chdir(str(nowyear))
-        if not os.path.exists(str(nowmonth)):
-            os.mkdir(str(nowmonth))
-            os.chdir(str(nowmonth))
-        else:
-            os.chdir(str(nowmonth))
+        checkfolder(nowyear)
+        checkfolder(nowmonth)
         self.nowday = datetime.date.today().day
         # file creation
         if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
