@@ -19,9 +19,7 @@ def aboutmenu():
 def checkfolder(folder):
     if not os.path.exists(str(folder)):
         os.mkdir(str(folder))
-        os.chdir(str(folder))
-    else:
-        os.chdir(str(folder))
+    os.chdir(str(folder))
 class MyGymPal():
     """ My gym pal class """
     def __init__(self, master):
