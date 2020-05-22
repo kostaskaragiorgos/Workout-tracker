@@ -17,6 +17,7 @@ def aboutmenu():
     """ about menu function """
     msg.showinfo("About", "My Gym Pal\nVersion 1.0")
 def checkfolder(folder):
+    """ creates a folder and changes the current directory """
     if not os.path.exists(str(folder)):
         os.mkdir(str(folder))
     os.chdir(str(folder))
@@ -51,7 +52,8 @@ class MyGymPal():
                                    command=self.clearname)
         self.menu.add_cascade(label="Edit", menu=self.edit_menu)
         self.show_menu = Menu(self.menu, tearoff=0)
-        self.show_menu.add_command(label="Today's Workout", accelerator='Alt+W', command=self.towork)
+        self.show_menu.add_command(label="Today's Workout",
+                                   accelerator='Alt+W', command=self.towork)
         self.show_menu.add_command(label="Total workouts this month", accelerator='Alt+T', command=totwork)
         self.menu.add_cascade(label="Show", menu=self.show_menu)
         self.about_menu = Menu(self.menu, tearoff=0)
