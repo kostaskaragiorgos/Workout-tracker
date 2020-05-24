@@ -9,10 +9,12 @@ import datetime
 import pandas as pd
 def totwork():
     """ days of workout this month"""
-    msg.showinfo("Montly Workout", "Day(s) of workout: "+str(len(os.listdir())))  
+    msg.showinfo("Montly Workout", "Day(s) of workout: "+str(len(os.listdir())))
 def helpmenu():
     """ help menu function """
-    msg.showinfo("Help", "Enter the name of the exercise, the number of sets,reps and the kg amount and press the submit button to save the data ")
+    msg.showinfo("Help", "Enter the name of the exercise," +
+                 "the number of sets,reps and the kg amount "+
+                 "and press the submit button to save the data ")
 def aboutmenu():
     """ about menu function """
     msg.showinfo("About", "My Gym Pal\nVersion 1.0")
@@ -54,7 +56,8 @@ class MyGymPal():
         self.show_menu = Menu(self.menu, tearoff=0)
         self.show_menu.add_command(label="Today's Workout",
                                    accelerator='Alt+W', command=self.towork)
-        self.show_menu.add_command(label="Total workouts this month", accelerator='Alt+T', command=totwork)
+        self.show_menu.add_command(label="Total workouts this month",
+                                   accelerator='Alt+T', command=totwork)
         self.menu.add_cascade(label="Show", menu=self.show_menu)
         self.about_menu = Menu(self.menu, tearoff=0)
         self.about_menu.add_command(label="About", accelerator='Ctrl+I', command=aboutmenu)
@@ -123,13 +126,20 @@ class MyGymPal():
         else:
             with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
                 thewriter = csv.writer(f)
-                thewriter.writerow([str(self.textname.get(1.0, END)), str(self.varnumset.get()), str(self.varnumreps.get()), str(self.kgslider.get())])
-            msg.showinfo("Your exersice", "Name of the exercise:"+str(self.textname.get(1.0, END))+"Reps:"+str(self.varnumreps.get())+"Sets:"+str(self.varnumset.get())+"Kg:"+str(self.kgslider.get()))
+                thewriter.writerow([str(self.textname.get(1.0, END)),
+                                    str(self.varnumset.get()),
+                                    str(self.varnumreps.get()),
+                                    str(self.kgslider.get())])
+            msg.showinfo("Your exersice", "Name of the exercise:"
+                         +str(self.textname.get(1.0, END))+"Reps:"
+                         +str(self.varnumreps.get())+"Sets:"
+                         +str(self.varnumset.get())+"Kg:"+
+                         str(self.kgslider.get()))
             self.reset()
     def exitmenu(self):
         """ exit menu function """
         if msg.askokcancel("Quit?", "Really quit?"):
-            self.master.destroy()      
+            self.master.destroy()
 def main():
     """ main function"""
     root = Tk()
