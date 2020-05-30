@@ -112,12 +112,12 @@ class MyGymPal():
         self.textname.delete(1.0, END)
     def towork(self):
         """ workout summary of the day """
-        if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
-            msg.showerror("No Exercises", "No exercises saved")
-        else:
-            df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
-            df.drop_duplicates(keep="first", inplace=True)
-            df.replace(r'\r\n', '', regex=True, inplace=True)
+        df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
+        df.drop_duplicates(keep="first", inplace=True)
+        df.replace(r'\r\n', '', regex=True, inplace=True)
+        if df.shape == (0,4):
+            msg.showerror("ERROR" , "NO WORKOUTS")
+        else:    
             msg.showinfo("Today's Workout", str(df))
     def submitb(self):
         """ submit button function """
