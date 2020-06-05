@@ -34,6 +34,8 @@
 
 ## Dependencies
 
+To install the dependencies
+
  <ul>
   <li> csv (conda install -c anaconda csvkit) </li>
   <li> second way to install csv( pip install python-csv) </li>
@@ -42,6 +44,14 @@
   <li> radon (conda install -c conda-forge radon) </li>
   <li> second way to install radon (pip install radon) </li>
 </ul>
+
+
+or run
+
+
+```shell
+pip install -r requirements.txt
+```
 
 ## Current Version
 
