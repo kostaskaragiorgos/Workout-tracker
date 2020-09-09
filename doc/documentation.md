@@ -76,11 +76,11 @@ An informative message pops up
 
 You can show info about the app by using menu About --> About or using Ctrl+i keybind
 
-<p><img src="doc images/about menu/about menu.png" title="about menu"/></p>
+<p><img src="doc images/about/about menu.png" title="about menu"/></p>
 
 An informative message pops up
 
-<p><img src="doc images/about menu/about.png" title="about menu"/></p> 
+<p><img src="doc images/about/about.png" title="about menu"/></p> 
 
 # Help menu
 
