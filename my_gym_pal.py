@@ -23,6 +23,12 @@ def checkfolder(folder):
     if not os.path.exists(str(folder)):
         os.mkdir(str(folder))
     os.chdir(str(folder))
+def createcsv(filename):
+    if not os.path.exists(filename):
+        with open(filename, 'a+') as f:
+            thewriter = csv.writer(f)
+            thewriter.writerow(['Name of the exercise', 'No of sets', 'No of reps', 'Kg'])
+
 class MyGymPal():
     """ My gym pal class """
     def __init__(self, master):
@@ -36,10 +42,7 @@ class MyGymPal():
         checkfolder(nowmonth)
         self.nowday = datetime.date.today().day
         # file creation
-        if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
-            with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
-                thewriter = csv.writer(f)
-                thewriter.writerow(['Name of the exercise', 'No of sets', 'No of reps', 'Kg'])
+        
         #menu
         self.menu = Menu(self.master)
         self.file_menu = Menu(self.menu, tearoff=0)
@@ -124,6 +127,7 @@ class MyGymPal():
         if self.textname.count(1.0, END) == (1, ):
             msg.showerror("Name Error", "Enter the name of the  exercise")
         else:
+            createcsv('My Gyn Pal'+str(self.nowday)+'.csv')
             with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
                 thewriter = csv.writer(f)
                 thewriter.writerow([str(self.textname.get(1.0, END)),
