@@ -24,6 +24,7 @@ def checkfolder(folder):
         os.mkdir(str(folder))
     os.chdir(str(folder))
 def createcsv(filename):
+    """ creates the csv file to save the exercises"""
     if not os.path.exists(filename):
         with open(filename, 'a+') as f:
             thewriter = csv.writer(f)
