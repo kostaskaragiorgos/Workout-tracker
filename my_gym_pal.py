@@ -83,6 +83,13 @@ class MyGymPal():
         self.exname.pack()
         self.textname = Text(self.master, height=1)
         self.textname.pack()
+        self.diff = Label(self.master, text="Difficulty")
+        self.diff.pack()
+        self.difflist = ["Easy", "Medium", "Hard", "Unable to do"]
+        self.diffstring = StringVar(master)
+        self.diffstring.set(self.difflist[0])
+        self.diffpopup = OptionMenu(self.master, self.diffstring, *self.difflist)
+        self.diffpopup.pack()
         self.setsleb = Label(self.master, text="Sets")
         self.setsleb.pack()
         self.setslist = list(range(1, 21))
