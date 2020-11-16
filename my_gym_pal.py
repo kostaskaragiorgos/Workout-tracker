@@ -35,7 +35,7 @@ class MyGymPal():
     def __init__(self, master):
         self.master = master
         self.master.title("My Gym Pal")
-        self.master.geometry("270x290")
+        self.master.geometry("280x340")
         self.master.resizable(False, False)
         nowyear = datetime.date.today().year
         nowmonth = datetime.date.today().month
