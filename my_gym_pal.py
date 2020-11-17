@@ -145,11 +145,12 @@ class MyGymPal():
             with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
                 thewriter = csv.writer(f)
                 thewriter.writerow([str(self.textname.get(1.0, END)),
+                                    str(self.diffstring.get()),
                                     str(self.varnumset.get()),
                                     str(self.varnumreps.get()),
                                     str(self.kgslider.get())])
             msg.showinfo("Your exersice", "Name of the exercise:"
-                         +str(self.textname.get(1.0, END))+"Reps:"
+                         +str(self.textname.get(1.0, END))+" Difficulty: "+str(self.diffstring.get())+"Reps:"
                          +str(self.varnumreps.get())+"Sets:"
                          +str(self.varnumset.get())+"Kg:"+
                          str(self.kgslider.get()))
