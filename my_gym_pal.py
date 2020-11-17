@@ -28,7 +28,7 @@ def createcsv(filename):
     if not os.path.exists(filename):
         with open(filename, 'a+') as f:
             thewriter = csv.writer(f)
-            thewriter.writerow(['Name of the exercise', 'No of sets', 'No of reps', 'Kg'])
+            thewriter.writerow(['Name of the exercise', 'Difficulty', 'No of sets', 'No of reps', 'Kg'])
 
 class MyGymPal():
     """ My gym pal class """
