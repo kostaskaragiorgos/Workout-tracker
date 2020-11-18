@@ -43,7 +43,7 @@ class MyGymPal():
         checkfolder(nowmonth)
         self.nowday = datetime.date.today().day
         # file creation
-        
+        createcsv('My Gyn Pal'+str(self.nowday)+'.csv')
         #menu
         self.menu = Menu(self.master)
         self.file_menu = Menu(self.menu, tearoff=0)
@@ -132,7 +132,7 @@ class MyGymPal():
         df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
         df.drop_duplicates(keep="first", inplace=True)
         df.replace(r'\r\n', '', regex=True, inplace=True)
-        if df.shape == (0,4):
+        if df.shape == (0,5):
             msg.showerror("ERROR" , "NO WORKOUTS")
         else:    
             msg.showinfo("Today's Workout", str(df))
@@ -141,7 +141,7 @@ class MyGymPal():
         if self.textname.count(1.0, END) == (1, ):
             msg.showerror("Name Error", "Enter the name of the  exercise")
         else:
-            createcsv('My Gyn Pal'+str(self.nowday)+'.csv')
+            
             with open('My Gyn Pal'+str(self.nowday)+'.csv', 'a+') as f:
                 thewriter = csv.writer(f)
                 thewriter.writerow([str(self.textname.get(1.0, END)),
