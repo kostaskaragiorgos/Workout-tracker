@@ -58,8 +58,11 @@ class MyGymPal():
                                    command=self.clearname)
         self.menu.add_cascade(label="Edit", menu=self.edit_menu)
         self.show_menu = Menu(self.menu, tearoff=0)
-        self.show_menu.add_command(label="Show Difficulty",
-                                   accelerator='Ctrl+D', command=self.showdiff)
+        self.submenu = Menu(self.show_menu, tearoff=0)
+        self.submenu.add_command(label="Easy", accelerator='Ctrl+D', command=self.showeasy)
+        self.submenu.add_command(label="Hard", command=self.showhard)
+        self.show_menu.add_cascade(label="Most used per Difficulty",
+                                   menu=self.submenu, underline=0)
         self.show_menu.add_command(label="Today's Workout",
                                    accelerator='Alt+W', command=self.towork)
         self.show_menu.add_command(label="Total workouts this month",
@@ -115,7 +118,16 @@ class MyGymPal():
         self.resetb = Button(self.master, text="Reset", command=self.reset)
         self.resetb.pack()
     
-    def showdiff(self):
+    def showhard(self):
+        pass
+
+    def showunabletodo(self):
+        pass
+    
+    def showmedium(self):
+        pass
+
+    def showeasy(self):
         pass
 
     def reset(self):
