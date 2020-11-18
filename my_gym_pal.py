@@ -61,6 +61,8 @@ class MyGymPal():
         self.submenu = Menu(self.show_menu, tearoff=0)
         self.submenu.add_command(label="Easy", accelerator='Ctrl+D', command=self.showeasy)
         self.submenu.add_command(label="Hard", command=self.showhard)
+        self.submenu.add_command(label="Medium", command=self.showmedium)
+        self.submenu.add_command(label="Unable to do", command=self.showunabletodo)
         self.show_menu.add_cascade(label="Most used per Difficulty",
                                    menu=self.submenu, underline=0)
         self.show_menu.add_command(label="Today's Workout",
