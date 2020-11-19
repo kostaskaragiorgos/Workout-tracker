@@ -126,6 +126,8 @@ class MyGymPal():
         df.replace(r'\r\n', '', regex=True, inplace=True)
         if df.shape == (0,5):
             msg.showerror("ERROR" , "NO WORKOUTS")
+        else:
+            msg.showinfo("Easy",str([df[df['Difficulty']=="Hard"]['Name of the exercise']]))
 
     def showunabletodo(self):
         df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
