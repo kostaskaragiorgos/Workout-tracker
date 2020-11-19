@@ -130,7 +130,13 @@ class MyGymPal():
         pass
 
     def showeasy(self):
-        pass
+        df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
+        df.drop_duplicates(keep="first", inplace=True)
+        df.replace(r'\r\n', '', regex=True, inplace=True)
+        if df.shape == (0,5):
+            msg.showerror("ERROR" , "NO WORKOUTS")
+        else:
+            msg.showinfo("Easy",str([df[df['Difficulty']=="Easy"]['Name of the exercise']]))
 
     def reset(self):
         """ reset button function """
