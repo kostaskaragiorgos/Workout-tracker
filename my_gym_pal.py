@@ -121,7 +121,11 @@ class MyGymPal():
         self.resetb.pack()
     
     def showhard(self):
-        pass
+        df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
+        df.drop_duplicates(keep="first", inplace=True)
+        df.replace(r'\r\n', '', regex=True, inplace=True)
+        if df.shape == (0,5):
+            msg.showerror("ERROR" , "NO WORKOUTS")
 
     def showunabletodo(self):
         df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
