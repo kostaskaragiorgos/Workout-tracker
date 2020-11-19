@@ -127,7 +127,7 @@ class MyGymPal():
         if df.shape == (0,5):
             msg.showerror("ERROR" , "NO WORKOUTS")
         else:
-            msg.showinfo("Easy",str([df[df['Difficulty']=="Hard"]['Name of the exercise']]))
+            msg.showinfo("Hard",str([df[df['Difficulty']=="Hard"]['Name of the exercise']]))
 
     def showunabletodo(self):
         df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
@@ -136,7 +136,7 @@ class MyGymPal():
         if df.shape == (0,5):
             msg.showerror("ERROR" , "NO WORKOUTS")
         else:
-            msg.showinfo("Easy",str([df[df['Difficulty']=="Unable to do"]['Name of the exercise']]))
+            msg.showinfo("Unable to do",str([df[df['Difficulty']=="Unable to do"]['Name of the exercise']]))
             
     
     def showmedium(self):
@@ -146,7 +146,7 @@ class MyGymPal():
         if df.shape == (0,5):
             msg.showerror("ERROR" , "NO WORKOUTS")
         else:
-            msg.showinfo("Easy",str([df[df['Difficulty']=="Medium"]['Name of the exercise']]))
+            msg.showinfo("Medium",str([df[df['Difficulty']=="Medium"]['Name of the exercise']]))
 
     def showeasy(self):
         df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
