@@ -86,8 +86,12 @@ All project documentation is located in the `./doc`  folder.
   <li> Exit(Alt+F4) </li>
   <li> Reset(Alt+R) </li>
   <li> Clear Name(Ctrl + S) </li>
-  <li> Today's Workout(Alt+W) </li>
-  <li> Total workouts this month(Alt+T) </li>
+  <li> Easy (Ctrl + D) </li>
+  <li> Hard (Ctrl + O) </li>
+  <li> Medium (Ctrl + U) </li>
+  <li> Unable to do (Ctrl + Y) </li>
+  <li> Today's Workout (Alt+W) </li>
+  <li> Total workouts this month (Alt+T) </li>
   <li> About(Ctrl+I) </li>
   <li> Help(Ctrl+F1) </li>
 </ul>
