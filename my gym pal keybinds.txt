@@ -1,15 +1,19 @@
 File menu
 =======================
 Submit Exercise Alt + O
-Reset Alt + R
 Exit Alt + F4
 =============
 Edit menu
 ===================
+Reset Alt + R
 Clear Name Ctrl + S
 ===================
 Show menu
 =======================
+Easy Ctrl + D
+Hard Ctrl + O
+Medium Ctrl + U
+Unable to do Ctrl + Y
 Today's Workout Alt + W
 Total workouts this month Alt + T
 =================================
