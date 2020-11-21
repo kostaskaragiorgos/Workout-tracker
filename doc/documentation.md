@@ -44,6 +44,16 @@ You can clear the name of the exercise text field using Edit --> Clear Name or u
 
 # SHOW
 
+# Show Easy
+
+# Show Hard
+
+
+# Show Medium
+
+
+# Show unable to do
+
 ## Today's workout
 
 You can see today's workout using Show --> Today's workout or using Alt + W
