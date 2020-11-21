@@ -50,6 +50,7 @@ You can show the easy exercises by using Show --> Show Easy menu or using Ctrl+D
 
 # Show Hard
 
+You can show the hard exercises by using Show --> Show Hard menu or using Ctrl+O keybind
 
 # Show Medium
 
