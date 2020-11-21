@@ -54,9 +54,11 @@ You can show the hard exercises by using Show --> Show Hard menu or using Ctrl+O
 
 # Show Medium
 
-You can show the hard exercises by using Show --> Show Medium menu or using Ctrl+U keybind
+You can show the medium exercises by using Show --> Show Medium menu or using Ctrl+U keybind
 
 # Show unable to do
+
+You can show the unable to do exercises by using Show --> Show Unable to do menu or using Ctrl+y keybind
 
 ## Today's workout
 
