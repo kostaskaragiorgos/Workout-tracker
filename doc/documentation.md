@@ -54,6 +54,7 @@ You can show the hard exercises by using Show --> Show Hard menu or using Ctrl+O
 
 # Show Medium
 
+You can show the hard exercises by using Show --> Show Medium menu or using Ctrl+U keybind
 
 # Show unable to do
 
