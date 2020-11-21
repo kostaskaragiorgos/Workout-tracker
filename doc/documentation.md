@@ -46,6 +46,8 @@ You can clear the name of the exercise text field using Edit --> Clear Name or u
 
 # Show Easy
 
+You can show the easy exercises by using Show --> Show Easy menu or using Ctrl+D keybind
+
 # Show Hard
 
 
