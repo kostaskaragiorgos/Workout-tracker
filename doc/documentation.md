@@ -48,11 +48,13 @@ You can clear the name of the exercise text field using Edit --> Clear Name or u
 
 You can show the easy exercises by using Show --> Show Easy menu or using Ctrl+D keybind
 
-<p><img src="doc images/show/show most easy.png" title="Show easy"/></p>
+<p><img src="doc images/show/show most easy.png" title="Show Easy"/></p>
 
 # Show Hard
 
 You can show the hard exercises by using Show --> Show Hard menu or using Ctrl+O keybind
+
+<p><img src="doc images/show/show most hard.png" title="Show Hard"/></p>
 
 # Show Medium
 
