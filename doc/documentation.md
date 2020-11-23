@@ -48,6 +48,8 @@ You can clear the name of the exercise text field using Edit --> Clear Name or u
 
 You can show the easy exercises by using Show --> Show Easy menu or using Ctrl+D keybind
 
+<p><img src="doc images/show/show most easy.png" title="Show easy"/></p>
+
 # Show Hard
 
 You can show the hard exercises by using Show --> Show Hard menu or using Ctrl+O keybind
@@ -58,7 +60,7 @@ You can show the medium exercises by using Show --> Show Medium menu or using Ct
 
 # Show unable to do
 
-You can show the unable to do exercises by using Show --> Show Unable to do menu or using Ctrl+y keybind
+You can show the unable to do exercises by using Show --> Show Unable to do menu or using Ctrl+Y keybind
 
 ## Today's workout
 
