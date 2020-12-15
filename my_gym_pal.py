@@ -134,6 +134,7 @@ class MyGymPal():
             msg.showinfo("Hard",str([df[df['Difficulty']=="Hard"]['Name of the exercise']]))
 
     def showunabletodo(self):
+        """ shows the unable  to do exercises"""
         df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
         df.drop_duplicates(keep="first", inplace=True)
         df.replace(r'\r\n', '', regex=True, inplace=True)
