@@ -156,6 +156,7 @@ class MyGymPal():
             msg.showinfo("Medium",str([df[df['Difficulty']=="Medium"]['Name of the exercise']]))
 
     def showeasy(self):
+        """ shows the easy to do exercises"""
         df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
         df.drop_duplicates(keep="first", inplace=True)
         df.replace(r'\r\n', '', regex=True, inplace=True)
