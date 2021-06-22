@@ -5,7 +5,14 @@ Exit Alt + F4
 =============
 Edit menu
 ===================
-Reset Alt + R
+Reset sub menu
+====================
+Difficulty Alt-D
+Sets Ctrl + T
+Reps Ctrl + W
+Kg Ctrl + R
+===================
+Reset All Alt+R
 Clear Name Ctrl + S
 ===================
 Show menu
