@@ -31,21 +31,32 @@ You press ok to close the app or cancel if you don't want
 # EDIT
 
 ## Reset
+
 ### Difficulty
 
 You can reset difficulty to intial state Edit --> Reset --> Difficulty or by using Alt+D keybind
+
+<p><img src = "doc images/edit/Reset Difficulty.png" title="Reset Difficulty"/> </p>
 
 ### Sets
 
 You can reset difficulty to intial state Edit --> Reset --> Sets or by using Ctrl+T keybind
 
+<p><img src = "doc images/edit/Reset Sets.png" title="Reset Sets"/> </p>
+
 ### Reps
 
-You can reset difficulty to intial state Edit --> Reset --> Difficulty or by using Ctrl+W keybind
+You can reset difficulty to intial state Edit --> Reset --> Reps or by using Ctrl+W keybind
+
+<p><img src = "doc images/edit/Reset Reps.png" title="Reset Reps"/> </p>
+
 
 ### kg
 
-You can reset difficulty to intial state Edit --> Reset --> Difficulty or by using Alt+D keybind
+You can reset difficulty to intial state Edit --> Reset --> Kg or by using Ctrl + R keybind
+
+<p><img src = "doc images/edit/Reset Kg.png" title="Reset Kg"/> </p>
+
 
 ## Reset All
 
