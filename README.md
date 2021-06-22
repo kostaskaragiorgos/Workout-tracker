@@ -84,7 +84,11 @@ All project documentation is located in the `./doc`  folder.
 <ul>
   <li> Submit Exercise(Alt+O) </li>
   <li> Exit(Alt+F4) </li>
-  <li> Reset(Alt+R) </li>
+  <li> Reset All(Alt+R) </li>
+  <li> Difficulty(Alt+D) </li>
+  <li> Sets(Ctrl+T) </li>
+  <li> Reps(Ctrl+W) </li>
+  <li> Kg(Ctrl+R) </li>
   <li> Clear Name(Ctrl + S) </li>
   <li> Easy (Ctrl + D) </li>
   <li> Hard (Ctrl + O) </li>
