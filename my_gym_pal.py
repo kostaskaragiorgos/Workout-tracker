@@ -58,8 +58,6 @@ class MyGymPal():
         self.clearsubmenu.add_command(label="Sets", accelerator="Ctrl+T", command=lambda: self.reset(toclear=self.varnumset, textflag=False, textl= self.setslist[0]))
         self.clearsubmenu.add_command(label="Reps", accelerator="Ctrl+W", command=lambda: self.reset(toclear=self.varnumreps, textflag=False, text=self.repslist[0]))
         self.clearsubmenu.add_command(label="Kg", accelerator="Ctrl+R", command=lambda: self.reset(toclear=self.kgslider, textflag=False, text= 0))
-
-
         self.edit_menu.add_cascade(label="Reset", menu=self.clearsubmenu, underline=0)
         self.edit_menu.add_command(label="Reset All", accelerator='Alt+R', command=self.reset)
         self.edit_menu.add_command(label="Clear Name", accelerator='Ctrl+S',
