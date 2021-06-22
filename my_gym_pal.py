@@ -171,12 +171,18 @@ class MyGymPal():
         else:
             msg.showinfo("Easy",str([df[df['Difficulty']=="Easy"]['Name of the exercise']]))
 
-    def reset(self):
+    def reset(self, toclear=None, textflag=True, text=""):
         """ reset button function """
-        self.varnumreps.set(self.repslist[0])
-        self.varnumset.set(self.setslist[0])
-        self.kgslider.set(0)
-        self.textname.delete(1.0, END)
+        if toclear is None:
+            self.varnumreps.set(self.repslist[0])
+            self.varnumset.set(self.setslist[0])
+            self.kgslider.set(0)
+            self.textname.delete(1.0, END)
+        elif textflag:
+            toclear.delete(1.0,END)
+        else:
+            toclear.set(text)
+            
     def clearname(self):
         """ clear name text field """
         self.textname.delete(1.0, END)
