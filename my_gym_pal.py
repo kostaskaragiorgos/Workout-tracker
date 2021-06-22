@@ -54,10 +54,10 @@ class MyGymPal():
         self.menu.add_cascade(label="File", menu=self.file_menu)
         self.edit_menu = Menu(self.menu, tearoff=0)
         self.clearsubmenu = Menu(self.edit_menu, tearoff=0)
-        self.clearsubmenu.add_command(label="Difficulty")
-        self.clearsubmenu.add_command(label="Sets")
-        self.clearsubmenu.add_command(label="Reps")
-        self.clearsubmenu.add_command(label="Kg")
+        self.clearsubmenu.add_command(label="Difficulty", accelerator="")
+        self.clearsubmenu.add_command(label="Sets", accelerator="")
+        self.clearsubmenu.add_command(label="Reps", accelerator="")
+        self.clearsubmenu.add_command(label="Kg", accelerator="")
         self.edit_menu.add_cascade(label="Reset", menu=self.clearsubmenu, underline=0)
         self.edit_menu.add_command(label="Reset All", accelerator='Alt+R', command=self.reset)
         self.edit_menu.add_command(label="Clear Name", accelerator='Ctrl+S',
@@ -95,6 +95,12 @@ class MyGymPal():
         self.master.bind('<Alt-w>', lambda event: self.towork())
         self.master.bind('<Alt-r>', lambda event: self.reset())
         self.master.bind('<Control-s>', lambda event: self.reset(toclear=self.textname))
+        self.master.bind('<Control-w>', lambda event: self.reset(toclear=self.varnumreps, textflag=False, text=self.repslist[0]))
+        self.master.bind('<Control-r>', lambda event: self.reset(toclear=self.kgslider, textflag=False, text= 0))
+        self.master.bind('<Control-t>', lambda event: self.reset(toclear=self.varnumset, textflag=False, textl= self.setslist[0]))
+        self.master.bind('<Alt-d>', lambda event: self.reset(toclear=self.diffstring, textflag=False, text=self.difflist[0]))
+
+
         self.exname = Label(self.master,
                             text="Enter the name of the exercise")
         self.exname.pack()
