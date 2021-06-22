@@ -61,7 +61,7 @@ class MyGymPal():
         self.edit_menu.add_cascade(label="Reset", menu=self.clearsubmenu, underline=0)
         self.edit_menu.add_command(label="Reset All", accelerator='Alt+R', command=self.reset)
         self.edit_menu.add_command(label="Clear Name", accelerator='Ctrl+S',
-                                   command=self.clearname)
+                                   command=lambda: self.reset(toclear=self.textname))
         self.menu.add_cascade(label="Edit", menu=self.edit_menu)
         self.show_menu = Menu(self.menu, tearoff=0)
         self.submenu = Menu(self.show_menu, tearoff=0)
@@ -94,7 +94,7 @@ class MyGymPal():
         self.master.bind('<Alt-t>', lambda event: totwork())
         self.master.bind('<Alt-w>', lambda event: self.towork())
         self.master.bind('<Alt-r>', lambda event: self.reset())
-        self.master.bind('<Control-s>', lambda event: self.clearname())
+        self.master.bind('<Control-s>', lambda event: self.reset(toclear=self.textname))
         self.exname = Label(self.master,
                             text="Enter the name of the exercise")
         self.exname.pack()
@@ -182,10 +182,8 @@ class MyGymPal():
             toclear.delete(1.0,END)
         else:
             toclear.set(text)
-            
-    def clearname(self):
-        """ clear name text field """
-        self.textname.delete(1.0, END)
+
+
     def towork(self):
         """ workout summary of the day """
         df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
