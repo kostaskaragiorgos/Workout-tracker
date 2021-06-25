@@ -189,13 +189,16 @@ class MyGymPal():
 
     def showeasy(self):
         """ shows the easy to do exercises"""
-        df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
-        df.drop_duplicates(keep="first", inplace=True)
-        df.replace(r'\r\n', '', regex=True, inplace=True)
-        if df.shape == (0,5):
-            msg.showerror("ERROR" , "NO WORKOUTS")
+        if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
+            msg.showerror("ERROR", "THERE IS NO WORKOUT FILE")
         else:
-            msg.showinfo("Easy",str([df[df['Difficulty']=="Easy"]['Name of the exercise']]))
+            df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
+            df.drop_duplicates(keep="first", inplace=True)
+            df.replace(r'\r\n', '', regex=True, inplace=True)
+            if df.shape == (0,5):
+                msg.showerror("ERROR" , "NO WORKOUTS")
+            else:
+                msg.showinfo("Easy",str([df[df['Difficulty']=="Easy"]['Name of the exercise']]))
 
     def reset(self, toclear=None, textflag=True, text=""):
         """ reset button function """
@@ -212,13 +215,16 @@ class MyGymPal():
 
     def towork(self):
         """ workout summary of the day """
-        df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
-        df.drop_duplicates(keep="first", inplace=True)
-        df.replace(r'\r\n', '', regex=True, inplace=True)
-        if df.shape == (0,5):
-            msg.showerror("ERROR" , "NO WORKOUTS")
-        else:    
-            msg.showinfo("Today's Workout", str(df))
+        if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
+            msg.showerror("ERROR", "THERE IS NO WORKOUT FILE")
+        else:
+            df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
+            df.drop_duplicates(keep="first", inplace=True)
+            df.replace(r'\r\n', '', regex=True, inplace=True)
+            if df.shape == (0,5):
+                msg.showerror("ERROR" , "NO WORKOUTS")
+            else:    
+                msg.showinfo("Today's Workout", str(df))
     def submitb(self):
         """ submit button function """
         if self.textname.count(1.0, END) == (1, ):
