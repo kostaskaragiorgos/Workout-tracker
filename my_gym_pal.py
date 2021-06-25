@@ -33,6 +33,8 @@ def removecsv(filename):
     if  os.path.exists(filename):
         os.remove(filename)
         msg.showinfo("SUCCESS", "THE WORKOUT FILE HAS BEEN SUCCESSFULLY DELETED")
+    else:
+        msg.showerror("ERROR", "NO WORKOUT FILE TO REMOVE")
 
 
 
