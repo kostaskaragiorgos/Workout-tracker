@@ -94,10 +94,10 @@ class MyGymPal():
         self.master.config(menu=self.menu)
 
 
-        self.master.bind('<Control-d>', lambda event: self.showeasy())
-        self.master.bind('<Control-o>', lambda event: self.showhard())
-        self.master.bind('<Control-u>', lambda event: self.showmedium())
-        self.master.bind('<Control-y>', lambda event: self.showunabletodo())
+        self.master.bind('<Control-d>', lambda event: self.showcategory("EASY"))
+        self.master.bind('<Control-o>', lambda event: self.showcategory("HARD"))
+        self.master.bind('<Control-u>', lambda event: self.showcategory("MEDIUM"))
+        self.master.bind('<Control-y>', lambda event: self.showcategory("UNABLETODO"))
         self.master.bind('<Alt-F4>', lambda event: self.exitmenu())
         self.master.bind('<Control-F1>', lambda event: helpmenu())
         self.master.bind('<Control-i>', lambda event: aboutmenu())
@@ -147,7 +147,7 @@ class MyGymPal():
         self.resetb = Button(self.master, text="Reset", command=self.reset)
         self.resetb.pack()
     
-    def showhard(self):
+    def showcategory(self, category):
         """ shows the hard to do exercises"""
         if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
             msg.showerror("ERROR", "THERE IS NO WORKOUT FILE")
@@ -158,47 +158,8 @@ class MyGymPal():
             if df.shape == (0,5):
                 msg.showerror("ERROR" , "NO WORKOUTS")
             else:
-                msg.showinfo("Hard",str([df[df['Difficulty']=="Hard"]['Name of the exercise']]))
+                msg.showinfo(str(category),str([df[df['Difficulty']==str(category)]['Name of the exercise']]))
 
-    def showunabletodo(self):
-        """ shows the unable  to do exercises"""
-        if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
-            msg.showerror("ERROR", "THERE IS NO WORKOUT FILE")
-        else:
-            df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
-            df.drop_duplicates(keep="first", inplace=True)
-            df.replace(r'\r\n', '', regex=True, inplace=True)
-            if df.shape == (0,5):
-                msg.showerror("ERROR" , "NO WORKOUTS")
-            else:
-                msg.showinfo("Unable to do",str([df[df['Difficulty']=="Unable to do"]['Name of the exercise']]))
-                
-    
-    def showmedium(self):
-        """ shows the medium to do exercises"""
-        if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
-            msg.showerror("ERROR", "THERE IS NO WORKOUT FILE")
-        else:
-            df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
-            df.drop_duplicates(keep="first", inplace=True)
-            df.replace(r'\r\n', '', regex=True, inplace=True)
-            if df.shape == (0,5):
-                msg.showerror("ERROR" , "NO WORKOUTS")
-            else:
-                msg.showinfo("Medium",str([df[df['Difficulty']=="Medium"]['Name of the exercise']]))
-
-    def showeasy(self):
-        """ shows the easy to do exercises"""
-        if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
-            msg.showerror("ERROR", "THERE IS NO WORKOUT FILE")
-        else:
-            df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
-            df.drop_duplicates(keep="first", inplace=True)
-            df.replace(r'\r\n', '', regex=True, inplace=True)
-            if df.shape == (0,5):
-                msg.showerror("ERROR" , "NO WORKOUTS")
-            else:
-                msg.showinfo("Easy",str([df[df['Difficulty']=="Easy"]['Name of the exercise']]))
 
     def reset(self, toclear=None, textflag=True, text=""):
         """ reset button function """
