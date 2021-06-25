@@ -29,6 +29,12 @@ def createcsv(filename):
         with open(filename, 'a+') as f:
             thewriter = csv.writer(f)
             thewriter.writerow(['Name of the exercise', 'Difficulty', 'No of sets', 'No of reps', 'Kg'])
+def removecsv(filename):
+    if  os.path.exists(filename):
+        os.remove(filename)
+        msg.showinfo("SUCCESS", "THE WORKOUT FILE HAS BEEN SUCCESSFULLY DELETED")
+
+
 
 class MyGymPal():
     """ My gym pal class """
@@ -49,6 +55,7 @@ class MyGymPal():
         self.file_menu = Menu(self.menu, tearoff=0)
         self.file_menu.add_command(label="Submit Exercise", accelerator='Alt+O',
                                    command=self.submitb)
+        self.file_menu.add_command(label="Delete Workout", command=lambda: removecsv('My Gyn Pal'+str(self.nowday)+'.csv'))
         self.file_menu.add_command(label="Exit", accelerator='Alt+F4',
                                    command=self.exitmenu)
         self.menu.add_cascade(label="File", menu=self.file_menu)
@@ -83,6 +90,8 @@ class MyGymPal():
         self.help_menu.add_command(label="Help", accelerator='Ctrl+F1', command=helpmenu)
         self.menu.add_cascade(label="Help", menu=self.help_menu)
         self.master.config(menu=self.menu)
+
+
         self.master.bind('<Control-d>', lambda event: self.showeasy())
         self.master.bind('<Control-o>', lambda event: self.showhard())
         self.master.bind('<Control-u>', lambda event: self.showmedium())
