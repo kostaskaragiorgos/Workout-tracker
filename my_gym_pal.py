@@ -57,7 +57,7 @@ class MyGymPal():
         self.file_menu = Menu(self.menu, tearoff=0)
         self.file_menu.add_command(label="Submit Exercise", accelerator='Alt+O',
                                    command=self.submitb)
-        self.file_menu.add_command(label="Delete Workout", command=lambda: removecsv('My Gyn Pal'+str(self.nowday)+'.csv'))
+        self.file_menu.add_command(label="Delete Workout", accelerator='Ctrl+B', command=lambda: removecsv('My Gyn Pal'+str(self.nowday)+'.csv'))
         self.file_menu.add_command(label="Exit", accelerator='Alt+F4',
                                    command=self.exitmenu)
         self.menu.add_cascade(label="File", menu=self.file_menu)
@@ -102,6 +102,7 @@ class MyGymPal():
         self.master.bind('<Control-F1>', lambda event: helpmenu())
         self.master.bind('<Control-i>', lambda event: aboutmenu())
         self.master.bind('<Alt-o>', lambda event: self.submitb())
+        self.master.bind('<Control-b>', lambda event: removecsv('My Gyn Pal'+str(self.nowday)+'.csv'))
         self.master.bind('<Alt-t>', lambda event: totwork())
         self.master.bind('<Alt-w>', lambda event: self.towork())
         self.master.bind('<Alt-r>', lambda event: self.reset())
