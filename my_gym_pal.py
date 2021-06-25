@@ -74,10 +74,10 @@ class MyGymPal():
         self.menu.add_cascade(label="Edit", menu=self.edit_menu)
         self.show_menu = Menu(self.menu, tearoff=0)
         self.submenu = Menu(self.show_menu, tearoff=0)
-        self.submenu.add_command(label="Easy", accelerator='Ctrl+D', command=self.showeasy)
-        self.submenu.add_command(label="Hard", accelerator='Ctrl+O', command=self.showhard)
-        self.submenu.add_command(label="Medium", accelerator='Ctrl+U', command=self.showmedium)
-        self.submenu.add_command(label="Unable to do", accelerator='Ctrl+Y', command=self.showunabletodo)
+        self.submenu.add_command(label="Easy", accelerator='Ctrl+D', command=lambda: self.showcategory("Easy"))
+        self.submenu.add_command(label="Hard", accelerator='Ctrl+O', command=lambda: self.showcategory("Hard"))
+        self.submenu.add_command(label="Medium", accelerator='Ctrl+U', command=lambda: self.showcategory("Medium"))
+        self.submenu.add_command(label="Unable to do", accelerator='Ctrl+Y', command=lambda: self.showcategory("Unable to do"))
         self.show_menu.add_cascade(label="Most used per Difficulty",
                                    menu=self.submenu, underline=0)
         self.show_menu.add_command(label="Today's Workout",
@@ -94,10 +94,10 @@ class MyGymPal():
         self.master.config(menu=self.menu)
 
 
-        self.master.bind('<Control-d>', lambda event: self.showcategory("EASY"))
-        self.master.bind('<Control-o>', lambda event: self.showcategory("HARD"))
-        self.master.bind('<Control-u>', lambda event: self.showcategory("MEDIUM"))
-        self.master.bind('<Control-y>', lambda event: self.showcategory("UNABLETODO"))
+        self.master.bind('<Control-d>', lambda event: self.showcategory("Easy"))
+        self.master.bind('<Control-o>', lambda event: self.showcategory("Hard"))
+        self.master.bind('<Control-u>', lambda event: self.showcategory("Medium"))
+        self.master.bind('<Control-y>', lambda event: self.showcategory("Unable to do"))
         self.master.bind('<Alt-F4>', lambda event: self.exitmenu())
         self.master.bind('<Control-F1>', lambda event: helpmenu())
         self.master.bind('<Control-i>', lambda event: aboutmenu())
@@ -158,7 +158,7 @@ class MyGymPal():
             if df.shape == (0,5):
                 msg.showerror("ERROR" , "NO WORKOUTS")
             else:
-                msg.showinfo(str(category),str([df[df['Difficulty']==str(category)]['Name of the exercise']]))
+                msg.showinfo(str(category),str([df[df['Difficulty']==category]['Name of the exercise']]))
 
 
     def reset(self, toclear=None, textflag=True, text=""):
