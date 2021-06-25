@@ -16,6 +16,20 @@ else an informative message pops up
 
 <p><img src = "doc images/file/no error submit.png" title="no error submit"/> </p>
 
+## Delete Workout
+
+You can delete the workout file using File --> Delete Workout or by using Ctrl+B keybind
+
+<p><img src = "doc images/file/delete workout.png" title="Delete Workout"/> </p>
+
+if there is a workout file delete's it and a informative message window pops up
+
+<p><img src = "doc images/file/delete workout success.png" title="delete workout success"/> </p>
+
+if there is no workout file to remove an error message window pops up
+
+<p><img src = "doc images/file/delete workout remove.png" title="no workout file to remove"/> </p>
+
 ## Exit
 
 You can close the app using menu File --> Exit or using Alt+F4 keybind
