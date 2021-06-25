@@ -162,24 +162,30 @@ class MyGymPal():
 
     def showunabletodo(self):
         """ shows the unable  to do exercises"""
-        df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
-        df.drop_duplicates(keep="first", inplace=True)
-        df.replace(r'\r\n', '', regex=True, inplace=True)
-        if df.shape == (0,5):
-            msg.showerror("ERROR" , "NO WORKOUTS")
+        if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
+            msg.showerror("ERROR", "THERE IS NO WORKOUT FILE")
         else:
-            msg.showinfo("Unable to do",str([df[df['Difficulty']=="Unable to do"]['Name of the exercise']]))
-            
+            df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
+            df.drop_duplicates(keep="first", inplace=True)
+            df.replace(r'\r\n', '', regex=True, inplace=True)
+            if df.shape == (0,5):
+                msg.showerror("ERROR" , "NO WORKOUTS")
+            else:
+                msg.showinfo("Unable to do",str([df[df['Difficulty']=="Unable to do"]['Name of the exercise']]))
+                
     
     def showmedium(self):
         """ shows the medium to do exercises"""
-        df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
-        df.drop_duplicates(keep="first", inplace=True)
-        df.replace(r'\r\n', '', regex=True, inplace=True)
-        if df.shape == (0,5):
-            msg.showerror("ERROR" , "NO WORKOUTS")
+        if not os.path.exists('My Gyn Pal'+str(self.nowday)+'.csv'):
+            msg.showerror("ERROR", "THERE IS NO WORKOUT FILE")
         else:
-            msg.showinfo("Medium",str([df[df['Difficulty']=="Medium"]['Name of the exercise']]))
+            df = pd.read_csv('My Gyn Pal'+str(self.nowday)+'.csv')
+            df.drop_duplicates(keep="first", inplace=True)
+            df.replace(r'\r\n', '', regex=True, inplace=True)
+            if df.shape == (0,5):
+                msg.showerror("ERROR" , "NO WORKOUTS")
+            else:
+                msg.showinfo("Medium",str([df[df['Difficulty']=="Medium"]['Name of the exercise']]))
 
     def showeasy(self):
         """ shows the easy to do exercises"""
